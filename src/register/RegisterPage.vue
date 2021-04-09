@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     ...mapActions('account', ['register']),
-    handleSubmit(e) {
+    handleSubmit (e) {
       this.submitted = true
       this.$validator.validate().then(valid => {
         if (valid) {
