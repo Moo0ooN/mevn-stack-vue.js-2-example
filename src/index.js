@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VeeValidate from 'vee-validate';
 
 import { store } from './_store';
-import { router } from './_helpers';
+import { router } from './router';
 import App from './App';
 
 Vue.use(VeeValidate);
