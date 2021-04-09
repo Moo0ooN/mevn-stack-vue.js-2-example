@@ -38,7 +38,7 @@ export default {
     }
   },
   created () {
-    axios.get(`http://222.198.139.97:3003/login`)
+    axios.get(`http://222.198.139.97:3003/book`)
     .then(response => {
       this.books = response.data
     })
