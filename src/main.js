@@ -6,14 +6,23 @@ import App from './app/App'
 import router from './router'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import VeeValidate from 'vee-validate'
+import { store } from './_store'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
+Vue.use(VeeValidate)
+
+// setup fake backend
+import { configureFakeBackend } from './_helpers'
+configureFakeBackend()
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
+  render: h => h(App),
   components: { App }
 })
