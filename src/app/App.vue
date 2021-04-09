@@ -26,7 +26,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6 offset-sm-3">
-          <div v-if="alert.message" :class="`alert ${alert.type}`">{{alert.message}}</div>
+          <div v-if="this.alert.message" :class="`alert ${this.alert.type}`">{{this.alert.message}}</div>
           <router-view></router-view>
         </div>
       </div>
