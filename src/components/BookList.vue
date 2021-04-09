@@ -3,7 +3,8 @@
     <b-col cols="12">
       <h2>
         Book List
-        <b-link href="#/login">(Add Book)</b-link>
+        <b-link href="#/add-book">(Add Book)</b-link>
+        <b-link href="https://www.bing.com">(Add Book2)</b-link>
       </h2>
       <b-table striped hover :items="books" :fields="fields">
         <template slot="actions" scope="row">
@@ -37,7 +38,7 @@ export default {
     }
   },
   created () {
-    axios.get(`http://222.198.139.97:3003/login`)
+    axios.get(`http://222.198.139.97:3003/book`)
     .then(response => {
       this.books = response.data
     })
@@ -55,4 +56,3 @@ export default {
   }
 }
 </script>
-
