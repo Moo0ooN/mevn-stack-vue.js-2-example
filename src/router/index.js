@@ -4,10 +4,10 @@ import BookList from '@/components/BookList'
 import ShowBook from '@/components/ShowBook'
 import CreateBook from '@/components/CreateBook'
 import EditBook from '@/components/EditBook'
-import HomePage from '../home/HomePage'
-import LoginPage from '../login/LoginPage'
-import RegisterPage from '../register/RegisterPage'
-import {router} from "../_helpers";
+import HomePage from '@/home/HomePage'
+import LoginPage from '@/login/LoginPage'
+import RegisterPage from '@/register/RegisterPage'
+import {router} from "@/_helpers";
 
 Vue.use(Router)
 
