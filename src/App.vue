@@ -50,10 +50,10 @@
       })
     },
     watch: {
-      $route (to, from){
+      $route (to, from) {
         // clear alert on location change
-        this.clearAlert();
+        this.clearAlert()
       }
     }
-  };
+  }
 </script>
