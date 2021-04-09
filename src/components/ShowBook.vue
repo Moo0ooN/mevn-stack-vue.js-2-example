@@ -39,7 +39,7 @@ export default {
     }
   },
   created () {
-    axios.get(`http://localhost:3000/book/` + this.$route.params.id)
+    axios.get(`http://222.198.139.97:3003/book/` + this.$route.params.id)
     .then(response => {
       this.book = response.data
     })
@@ -55,7 +55,7 @@ export default {
       })
     },
     deletebook (bookid) {
-      axios.delete('http://localhost:3000/book/' + bookid)
+      axios.delete('http://222.198.139.97:3003/book/' + bookid)
       .then((result) => {
         this.$router.push({
           name: 'BookList'

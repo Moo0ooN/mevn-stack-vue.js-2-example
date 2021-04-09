@@ -72,7 +72,7 @@ export default {
   methods: {
     onSubmit (evt) {
       evt.preventDefault()
-      axios.post(`http://localhost:3000/book`, this.book)
+      axios.post(`http://222.198.139.97:3003/book`, this.book)
       .then(response => {
         this.$router.push({
           name: 'ShowBook',
