@@ -7,17 +7,11 @@ import EditBook from '@/components/EditBook'
 import HomePage from '@/home/HomePage'
 import LoginPage from '@/login/LoginPage'
 import RegisterPage from '@/register/RegisterPage'
-import Login from '@/components/Login'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path: '/login',
-      name: 'Login',
-      component: Login
-    },
     {
       path: '/home-page',
       name: 'HomePage',
