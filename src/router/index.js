@@ -28,7 +28,7 @@ export default new Router({
       component: RegisterPage
     },
     {
-      path: '/',
+      path: '/book-list',
       name: 'BookList',
       component: BookList
     },
@@ -38,7 +38,7 @@ export default new Router({
       component: ShowBook
     },
     {
-      path: '/add-book',
+      path: '/',
       name: 'CreateBook',
       component: CreateBook
     },
