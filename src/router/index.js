@@ -13,7 +13,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/home-page',
+      path: '/',
       name: 'HomePage',
       component: HomePage
     },
@@ -38,7 +38,7 @@ export default new Router({
       component: ShowBook
     },
     {
-      path: '/create-book',
+      path: '/add-book',
       name: 'CreateBook',
       component: CreateBook
     },
