@@ -14,14 +14,14 @@ export const router = new Router({
   mode: 'history',
   routes: [
     {
+      path: '/',
+      name: 'LoginPage',
+      component: LoginPage
+    },
+    {
       path: '/home-page',
       name: 'HomePage',
       component: HomePage
-    },
-    {
-      path: '/login',
-      name: 'LoginPage',
-      component: LoginPage
     },
     {
       path: '/register',
@@ -29,7 +29,7 @@ export const router = new Router({
       component: RegisterPage
     },
     {
-      path: '/',
+      path: '/book-list',
       name: 'BookList',
       component: BookList
     },

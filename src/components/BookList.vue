@@ -4,7 +4,6 @@
       <h2>
         Book List
         <b-link href="#/add-book">(Add Book)</b-link>
-        <b-link href="#/login">登录</b-link>
       </h2>
       <b-table striped hover :items="books" :fields="fields">
         <template slot="actions" scope="row">
