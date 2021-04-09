@@ -1,35 +1,27 @@
 <template>
-  <div class="jumbotron">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6 offset-sm-3">
-          <div v-if="alert.message" :class="`alert ${alert.type}`">{{alert.message}}</div>
-          <router-view></router-view>
-        </div>
-      </div>
+  <a-config-provider :locale="locale">
+    <div id="app">
+      <router-view/>
     </div>
-  </div>
+  </a-config-provider>
 </template>
 
 <script>
-  import { mapState, mapActions } from 'vuex'
+  import { domTitle, setDocumentTitle } from '@/utils/domUtil'
+  import { i18nRender } from '@/locales'
 
   export default {
-    name: 'app',
+    data () {
+      return {
+      }
+    },
     computed: {
-      ...mapState({
-        alert: state => state.alert
-      })
-    },
-    methods: {
-      ...mapActions({
-        clearAlert: 'alert/clear'
-      })
-    },
-    watch: {
-      $route (to, from) {
-        // clear alert on location change
-        this.clearAlert()
+      locale () {
+        // 只是为了切换语言时，更新标题
+        const { title } = this.$route.meta
+        title && (setDocumentTitle(`${i18nRender(title)} - ${domTitle}`))
+
+        return this.$i18n.getLocaleMessage(this.$store.getters.lang).antLocale
       }
     }
   }
