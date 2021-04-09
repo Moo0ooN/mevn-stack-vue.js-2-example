@@ -13,6 +13,10 @@ export const userService = {
 }
 
 function login (username, password) {
+  config: JSON.stringify({
+    apiUrl: 'http://222.198.139.97:3003'
+  })
+
   const requestOptions = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
