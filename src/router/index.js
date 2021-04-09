@@ -11,6 +11,7 @@ import RegisterPage from '@/register/RegisterPage'
 Vue.use(Router)
 
 export const router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/home-page',

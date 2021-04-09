@@ -41,7 +41,7 @@
     name: 'app',
     computed: {
       ...mapState({
-        alert: state => state.alert
+        alert: state => this.state.alert
       })
     },
     methods: {
