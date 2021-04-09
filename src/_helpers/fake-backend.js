@@ -77,7 +77,7 @@ export function configureFakeBackend () {
           // validation
           let duplicateUser = users.filter(user => { return user.username === newUser.username; }).length
           if (duplicateUser) {
-            reject('Username "' + newUser.username + '" is already taken')
+            reject('用户名 "' + newUser.username + '" 已存在')
             return
           }
 
