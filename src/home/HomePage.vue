@@ -14,7 +14,7 @@
             </li>
         </ul>
         <p>
-            <router-link to="/">登出</router-link>
+            <router-link to="/login">登出</router-link>
         </p>
     </div>
 </template>
