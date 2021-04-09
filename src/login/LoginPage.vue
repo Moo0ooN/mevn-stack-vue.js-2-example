@@ -37,7 +37,7 @@ export default {
     ...mapState('account', ['status'])
   },
   created () {
-    reset login status
+    // reset login status
     this.logout()
   },
   methods: {
