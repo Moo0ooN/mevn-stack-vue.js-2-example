@@ -13,7 +13,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/home-page',
       name: 'HomePage',
       component: HomePage
     },
@@ -28,7 +28,7 @@ export default new Router({
       component: RegisterPage
     },
     {
-      path: '/book-list',
+      path: '/',
       name: 'BookList',
       component: BookList
     },
