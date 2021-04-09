@@ -1,3 +1,4 @@
+/* eslint-disable */
 // array in local storage for registered users
 let users = JSON.parse(localStorage.getItem('users')) || []
 export function configureFakeBackend () {
@@ -6,7 +7,6 @@ export function configureFakeBackend () {
     return new Promise((resolve, reject) => {
       // wrap in timeout to simulate server api call
       setTimeout(() => {
-
         // authenticate
         if (url.endsWith('/users/authenticate') && opts.method === 'POST') {
           // get parameters from post request

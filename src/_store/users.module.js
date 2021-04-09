@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { userService } from '../_services'
 
 const state = {
