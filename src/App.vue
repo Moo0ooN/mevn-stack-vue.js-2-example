@@ -35,15 +35,16 @@
 </template>
 
 <script>
-  import { mapState, mapActions } from 'vuex'
+  // import { mapState, mapActions } from 'vuex'
+  import { mapActions } from 'vuex'
 
   export default {
     name: 'app',
-    computed: {
-      ...mapState({
-        alert: state => this.state.alert
-      })
-    },
+    // computed: {
+    //   ...mapState({
+    //     alert: state => this.state.alert,
+    //   })
+    // },
     methods: {
       ...mapActions({
         clearAlert: 'alert/clear'
