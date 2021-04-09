@@ -1,5 +1,5 @@
 'use strict'
-// This is the webpack config used for unit tests.
+// This is the webpack config_web used for unit tests.
 
 const utils = require('./utils')
 const webpack = require('webpack')
@@ -21,7 +21,7 @@ const webpackConfig = merge(baseWebpackConfig, {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': require('../config/test.env')
+      'process.env': require('../config_web/test.env')
     })
   ]
 })

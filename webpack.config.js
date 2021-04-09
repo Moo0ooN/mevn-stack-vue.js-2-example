@@ -26,7 +26,7 @@ module.exports = {
         historyApiFallback: true
     },
     externals: {
-        // global app config object
+        // global app config_web object
         config: JSON.stringify({
             apiUrl: 'http://222.198.139.97:3003'
         })
