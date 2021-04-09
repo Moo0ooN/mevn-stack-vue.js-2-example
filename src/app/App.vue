@@ -37,13 +37,12 @@
 
 <script>
   import { mapState, mapActions } from 'vuex'
-  import { mapActions } from 'vuex'
 
   export default {
     name: 'app',
     computed: {
       ...mapState({
-        alert: state => this.state.alert,
+        alert: state => state.alert
       })
     },
     methods: {
