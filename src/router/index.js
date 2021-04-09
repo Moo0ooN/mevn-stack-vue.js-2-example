@@ -4,6 +4,9 @@ import BookList from '@/components/BookList'
 import ShowBook from '@/components/ShowBook'
 import CreateBook from '@/components/CreateBook'
 import EditBook from '@/components/EditBook'
+import HomePage from '@/home/HomePage'
+import LoginPage from '@/login/LoginPage'
+import RegisterPage from '@/register/RegisterPage'
 
 Vue.use(Router)
 
@@ -11,6 +14,21 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'HomePage',
+      component: HomePage
+    },
+    {
+      path: '/login',
+      name: 'LoginPage',
+      component: LoginPage
+    },
+    {
+      path: '/register',
+      name: 'RegisterPage',
+      component: RegisterPage
+    },
+    {
+      path: '/book-list',
       name: 'BookList',
       component: BookList
     },
