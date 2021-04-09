@@ -38,7 +38,7 @@ export default new Router({
       component: ShowBook
     },
     {
-      path: '/',
+      path: '/create-book',
       name: 'CreateBook',
       component: CreateBook
     },
