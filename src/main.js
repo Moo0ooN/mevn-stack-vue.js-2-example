@@ -8,13 +8,14 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VeeValidate from 'vee-validate'
 import { store } from './_store'
+import { configureFakeBackend } from './_helpers'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 Vue.use(VeeValidate)
 
 // setup fake backend
-import { configureFakeBackend } from './_helpers'
+
 configureFakeBackend()
 
 /* eslint-disable no-new */
