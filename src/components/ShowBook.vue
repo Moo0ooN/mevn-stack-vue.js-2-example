@@ -58,7 +58,7 @@ export default {
       axios.delete('http://222.198.139.97:3003/book/' + bookid)
       .then((result) => {
         this.$router.push({
-          name: 'LoginPage'
+          name: 'BookList'
         })
       })
       .catch(e => {
