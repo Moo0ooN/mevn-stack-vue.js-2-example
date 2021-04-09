@@ -30,7 +30,7 @@ export function configureFakeBackend () {
             resolve({ ok: true, text: () => Promise.resolve(JSON.stringify(responseJson)) })
           } else {
             // else return error
-            reject('Username or password is incorrect')
+            reject('用户名或密码错误')
           }
 
           return
