@@ -16,6 +16,7 @@ const actions = {
         user => {
           commit('loginSuccess', user);
           router.push('/');
+          console.log('I am back to login page')
         },
         error => {
           commit('loginFailure', error);
@@ -35,11 +36,9 @@ const actions = {
         user => {
           commit('registerSuccess', user);
           router.push('/login');
-          console.log('I have pushed the router')
           setTimeout(() => {
             // display success message after route change completes
-            dispatch('alert/success', 'Registration successful', { root: true });
-            console.log('注册成功')
+            dispatch('alert/success', '注册成功', { root: true });
           })
         },
         error => {

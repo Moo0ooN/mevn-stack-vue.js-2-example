@@ -32,7 +32,7 @@ export function configureFakeBackend() {
             resolve({ ok: true, text: () => Promise.resolve(JSON.stringify(responseJson)) });
           } else {
             // else return error
-            reject('Username or password is incorrect');
+            reject('密码或用户名不正确');
           }
 
           return;
@@ -45,7 +45,7 @@ export function configureFakeBackend() {
             resolve({ ok: true, text: () => Promise.resolve(JSON.stringify(users))});
           } else {
             // return 401 not authorised if token is null or invalid
-            reject('Unauthorised');
+            reject('未授权');
           }
 
           return;
@@ -65,7 +65,7 @@ export function configureFakeBackend() {
             resolve({ ok: true, text: () => JSON.stringify(user)});
           } else {
             // return 401 not authorised if token is null or invalid
-            reject('Unauthorised');
+            reject('未授权');
           }
 
           return;
@@ -79,7 +79,7 @@ export function configureFakeBackend() {
           // validation
           let duplicateUser = users.filter(user => { return user.username === newUser.username; }).length;
           if (duplicateUser) {
-            reject('Username "' + newUser.username + '" is already taken');
+            reject('用户名 "' + newUser.username + '" 已占用');
             return;
           }
 
@@ -115,7 +115,7 @@ export function configureFakeBackend() {
             resolve({ ok: true, text: () => Promise.resolve() });
           } else {
             // return 401 not authorised if token is null or invalid
-            reject('Unauthorised');
+            reject('未授权');
           }
 
           return;
