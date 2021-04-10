@@ -14,14 +14,14 @@ export const router = new Router({
   mode: 'history',
   routes: [
     {
-      path: '/login',
-      name: 'LoginPage',
-      component: LoginPage
-    },
-    {
       path: '/',
       name: 'HomePage',
       component: HomePage
+    },
+    {
+      path: '/login',
+      name: 'LoginPage',
+      component: LoginPage
     },
     {
       path: '/register',
