@@ -3,6 +3,7 @@
     <b-col cols="12">
       <h2>
         Book List
+        <router-link to="/add-book">添加图书</router-link>
         <b-link href="#/add-book">(Add Book)</b-link>
       </h2>
       <b-table striped hover :items="books" :fields="fields">
