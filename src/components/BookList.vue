@@ -29,8 +29,8 @@ export default {
     return {
       fields: {
         isbn: { label: 'ISBN', sortable: true, 'class': 'text-center' },
-        title: { label: 'Book Title', sortable: true },
-        actions: { label: 'Action', 'class': 'text-center' }
+        title: { label: '书名', sortable: true },
+        actions: { label: '操作', 'class': 'text-center' }
       },
       books: [],
       errors: []
