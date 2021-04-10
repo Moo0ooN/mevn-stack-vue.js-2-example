@@ -1,7 +1,7 @@
 <template>
     <div>
-<!--        <h1>你好！ {{account.user.firstName}}</h1>-->
-        <h1>你好!</h1>
+        <h1>你好！ {{account.user.firstName}}</h1>
+<!--        <h1>你好!</h1>-->
         <p>欢迎来到图书管理系统</p>
         <h3>来自安全api端点的用户：</h3>
         <em v-if="users.loading">加载用户...</em>
