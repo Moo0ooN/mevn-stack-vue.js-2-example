@@ -3,7 +3,7 @@
     <b-col cols="12">
       <h2>
         Book List
-        <b-link href="/add-book">(Add Book)</b-link>
+        <b-link href="#/add-book">(Add Book)</b-link>
       </h2>
       <b-table striped hover :items="books" :fields="fields">
         <template slot="actions" scope="row">
