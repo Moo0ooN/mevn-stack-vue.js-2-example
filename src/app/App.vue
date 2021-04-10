@@ -1,6 +1,6 @@
 <template>
   <b-container>
-<!--    <h1>MEVN Stack</h1>-->
+    <h1>图书管理系统</h1>
     <div v-if="alert.message" :class="`alert ${alert.type}`">{{alert.message}}</div>
     <router-view/>
   </b-container>
