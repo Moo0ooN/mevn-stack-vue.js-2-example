@@ -10,8 +10,8 @@ Vue.use(Router)
 export const router = new Router({
   mode: 'history',
   routes: [
-    { path: '/home-page', component: HomePage },
-    { path: '/', component: LoginPage },
+    { path: '/', component: HomePage },
+    { path: '/login', component: LoginPage },
     { path: '/register', component: RegisterPage },
 
     // otherwise redirect to home
@@ -21,12 +21,12 @@ export const router = new Router({
 
 router.beforeEach((to, from, next) => {
   // redirect to login page if not logged in and trying to access a restricted page
-  const publicPages = ['/', '/register']
+  const publicPages = ['/login', '/register']
   const authRequired = !publicPages.includes(to.path)
   const loggedIn = localStorage.getItem('user')
 
   if (authRequired && !loggedIn) {
-    return next('/')
+    return next('/login')
   }
 
   next()
