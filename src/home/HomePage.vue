@@ -1,20 +1,21 @@
 <template>
     <div>
         <h1>你好！ {{account.user.firstName}}</h1>
-        <p>You're logged in with Vue + Vuex & JWT!!</p>
-        <h3>Users from secure api end point:</h3>
-        <em v-if="users.loading">Loading users...</em>
-        <span v-if="users.error" class="text-danger">ERROR: {{users.error}}</span>
+        <p>欢迎来到图书管理系统</p>
+        <h3>来自安全api端点的用户：</h3>
+        <em v-if="users.loading">加载用户...</em>
+        <span v-if="users.error" class="text-danger">错误: {{users.error}}</span>
         <ul v-if="users.items">
             <li v-for="user in users.items" :key="user.id">
                 {{user.firstName + ' ' + user.lastName}}
-                <span v-if="user.deleting"><em> - Deleting...</em></span>
-                <span v-else-if="user.deleteError" class="text-danger"> - ERROR: {{user.deleteError}}</span>
-                <span v-else> - <a @click="deleteUser(user.id)" class="text-danger">Delete</a></span>
+                <span v-if="user.deleting"><em> - 删除...</em></span>
+                <span v-else-if="user.deleteError" class="text-danger"> - 错误: {{user.deleteError}}</span>
+                <span v-else> - <a @click="deleteUser(user.id)" class="text-danger">删除</a></span>
             </li>
         </ul>
         <p>
             <router-link to="/login">登出</router-link>
+            <router-link to="/book-list">进入图书管理系统</router-link>
         </p>
     </div>
 </template>
