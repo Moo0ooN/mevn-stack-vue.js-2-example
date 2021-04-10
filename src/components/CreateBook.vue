@@ -2,39 +2,39 @@
   <b-row>
     <b-col cols="12">
       <h2>
-        Add Book
-        <b-link href="#/book-list">(Book List)</b-link>
+        添加图书
+        <router-link to="/book-list">图书列表</router-link>
       </h2>
       <b-form @submit="onSubmit">
         <b-form-group id="fieldsetHorizontal"
                   horizontal
                   :label-cols="4"
                   breakpoint="md"
-                  label="Enter ISBN">
+                  label="ISBN">
           <b-form-input id="isbn" :state="state" v-model.trim="book.isbn"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal"
                   horizontal
                   :label-cols="4"
                   breakpoint="md"
-                  label="Enter Title">
+                  label="书名">
           <b-form-input id="title" :state="state" v-model.trim="book.title"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal"
                   horizontal
                   :label-cols="4"
                   breakpoint="md"
-                  label="Enter Author">
+                  label="作者">
           <b-form-input id="author" :state="state" v-model.trim="book.author"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal"
                   horizontal
                   :label-cols="4"
                   breakpoint="md"
-                  label="Enter Description">
+                  label="内容简介">
             <b-form-textarea id="description"
                        v-model="book.description"
-                       placeholder="Enter something"
+                       placeholder="请在此输入该书的内容简介..."
                        :rows="2"
                        :max-rows="6">{{book.description}}</b-form-textarea>
         </b-form-group>
@@ -42,17 +42,17 @@
                   horizontal
                   :label-cols="4"
                   breakpoint="md"
-                  label="Enter Publisher Year">
+                  label="出版年">
           <b-form-input id="published_year" :state="state" v-model.trim="book.published_year"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal"
                   horizontal
                   :label-cols="4"
                   breakpoint="md"
-                  label="Enter Publisher">
+                  label="出版社">
           <b-form-input id="publisher" :state="state" v-model.trim="book.publisher"></b-form-input>
         </b-form-group>
-        <b-button type="submit" variant="primary">Save</b-button>
+        <b-button type="submit" variant="primary">保存</b-button>
       </b-form>
     </b-col>
   </b-row>

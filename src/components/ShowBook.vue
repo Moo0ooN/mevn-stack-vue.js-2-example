@@ -2,26 +2,26 @@
   <b-row>
     <b-col cols="12">
       <h2>
-        Edit Book
-        <b-link href="#/book-list">(Book List)</b-link>
+        编辑图书
+        <router-link to="/book-list">图书列表</router-link>
       </h2>
       <b-jumbotron>
         <template slot="header">
           {{book.title}}
         </template>
         <template slot="lead">
-          ISBN: {{book.isbn}}<br>
-          Author: {{book.author}}<br>
-          Description: {{book.description}}<br>
-          Published Year: {{book.published_year}}<br>
-          Publisher: {{book.publisher}}<br>
+          ISBN: {{book.isbn}}<br><br>
+          作者: {{book.author}}<br><br>
+          内容简介: {{book.description}}<br><br>
+          出版年: {{book.published_year}}<br><br>
+          出版社: {{book.publisher}}<br>
         </template>
         <hr class="my-4">
         <p>
-          Updated Date: {{book.updated_date}}
+          更新日期: {{book.updated_date}}
         </p>
-        <b-btn variant="success" @click.stop="editbook(book._id)">Edit</b-btn>
-        <b-btn variant="danger" @click.stop="deletebook(book._id)">Delete</b-btn>
+        <b-btn variant="success" @click.stop="editbook(book._id)">编辑</b-btn>
+        <b-btn variant="danger" @click.stop="deletebook(book._id)">删除</b-btn>
       </b-jumbotron>
     </b-col>
   </b-row>

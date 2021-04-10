@@ -2,13 +2,12 @@
   <b-row>
     <b-col cols="12">
       <h2>
-        Book List
+        图书列表
         <router-link to="/add-book">添加图书</router-link>
-        <b-link href="#/add-book">(Add Book)</b-link>
       </h2>
       <b-table striped hover :items="books" :fields="fields">
         <template slot="actions" scope="row">
-          <b-btn size="sm" @click.stop="details(row.item)">Details</b-btn>
+          <b-btn size="sm" @click.stop="details(row.item)">详情</b-btn>
         </template>
       </b-table>
       <ul v-if="errors && errors.length">
